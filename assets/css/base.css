@@ -1,0 +1,68 @@
+:root {
+  --primary-color: #282828;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+.text-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+/* Đoạn quảng cáo trên header */
+.commercial {
+  background-color: #282828;
+  height: 4rem;
+}
+.commercial p {
+  line-height: 4rem;
+  font-size: 1.4rem;
+  color: #eee;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+@keyframes productBorderLine {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

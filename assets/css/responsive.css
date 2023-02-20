@@ -47,6 +47,29 @@
   .intro__img {
     width: 100% !important;
   }
+  /* footer */
+  .footer__content {
+    padding: 0 8px;
+  }
+  .contact__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 15px !important;
+  }
+  .contact__social {
+    justify-content: space-between;
+  }
+  .footer__list.footer__list-block {
+    display: block;
+  }
+  .footer__list-inner:hover .footer__list {
+    display: block;
+  }
+  .footer__list {
+    display: none;
+  }
   .message,
   .scroll-top {
     display: none;
@@ -73,6 +96,9 @@
   }
   .channel__video-src {
     height: 130px;
+  }
+  .link__img-height {
+    height: 60px;
   }
 }
 

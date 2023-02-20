@@ -27,27 +27,23 @@ const formLogin = $("#form-login");
 const authClose = $$(".close__icon.auth__close");
 const btnToRegister = $("#btn-to-register");
 const btnToLogin = $("#btn-to-login");
-
 // mở modal
 userOpen.addEventListener("click", function () {
   modal.classList.add("open");
   formLogin.style.display = "block";
   formRegister.style.display = "none";
 });
-
 // đóng modal
 authClose.forEach((closeElm) => {
   closeElm.onclick = function () {
     $("#modal.open").classList.remove("open");
   };
 });
-
 // Chuyển từ login sang register
 btnToRegister.onclick = function () {
   formLogin.style.display = "none";
   formRegister.style.display = "block";
 };
-
 // Chuyển từ register sang login
 btnToLogin.onclick = function () {
   formLogin.style.display = "block";

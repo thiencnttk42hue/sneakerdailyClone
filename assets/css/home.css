@@ -1,4 +1,8 @@
 .app {
+  overflow: hidden;
+}
+
+.app-content {
   margin-top: 9rem;
 }
 
@@ -277,8 +281,6 @@
 
 .newspaper {
   margin-bottom: 30px;
-}
-.newspaper-inner {
   justify-content: center;
 }
 .newspaper__heading {
@@ -346,6 +348,7 @@
   height: 43px;
   align-items: center;
   background-color: #2f5acf;
+  color: #282828;
   opacity: 0.8;
   cursor: pointer;
 }

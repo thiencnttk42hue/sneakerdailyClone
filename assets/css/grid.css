@@ -450,7 +450,7 @@
 /* Tablet - PC low resolution */
 @media (min-width: 740px) and (max-width: 1023px) {
   .wide {
-    width: 750px;
+    width: 740px;
   }
   .wide-inner {
     width: 656px;

@@ -11,9 +11,13 @@
     <!-- CSS link -->
     <link rel="stylesheet" href="./assets/css/grid.css" />
     <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/header.css" />
-    <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link rel="stylesheet" href="./assets/css/home.css" />
+    <!-- css slideshow -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
     <!-- GG font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,15 +47,113 @@
           <div class="row sm-gutters header-inner">
             <div class="col l-0 m-3 c-3">
               <div class="header__menu-mobile">
-                <img
-                  class="menu-mobile__img"
-                  src="./assets/images/header/MENU-trang-chu.png.webp"
-                  alt=""
+                <label for="menu-mobile__input" class="menu-mobile">
+                  <img
+                    class="menu-mobile__img"
+                    src="./assets/images/header/MENU-trang-chu.png.webp"
+                    alt=""
+                  />
+                </label>
+                <input
+                  type="checkbox"
+                  name=""
+                  hidden
+                  id="menu-mobile__input"
+                  class="menu-mobile__input"
                 />
+                <div class="modal"></div>
+                <div class="menu-mobile__container">
+                  <div class="header__close">
+                    <span>Đóng</span>
+                    <label
+                      for="menu-mobile__input"
+                      class="close__icon close__icon-modal"
+                    >
+                      <div class="close__icon-up"></div>
+                      <div class="close__icon-down"></div>
+                    </label>
+                  </div>
+                  <div class="container-inner">
+                    <ul class="container__list">
+                      <li class="container__item">
+                        <a href="#" class="container__item-link">
+                          <span>sản phẩm</span>
+                          <i
+                            class="container__item-icon fa-sharp fa-solid fa-angle-right"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="container__item">
+                        <a href="" class="container__item-link">
+                          <span>Nam</span>
+                          <i
+                            class="container__item-icon fa-sharp fa-solid fa-angle-right"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="container__item">
+                        <a href="" class="container__item-link">
+                          <span>Nữ</span>
+                          <i
+                            class="container__item-icon fa-sharp fa-solid fa-angle-right"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="container__item">
+                        <a href="" class="container__item-link">
+                          <span>thương hiệu</span>
+                          <i
+                            class="container__item-icon fa-sharp fa-solid fa-angle-right"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="container__item">
+                        <a href="" class="container__item-link">
+                          <span>môn thể thao</span>
+                          <i
+                            class="container__item-icon fa-sharp fa-solid fa-angle-right"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="container__item">
+                        <a href="" class="container__item-link sale">sale</a>
+                      </li>
+                    </ul>
+
+                    <ul class="container__contact">
+                      <li class="contact__item">
+                        <a href="" class="contact__item-link">24h Thời Trang</a>
+                      </li>
+                      <li class="contact__item">
+                        <span class="contact__item-bool"
+                          >Gọi điện mua hàng:</span
+                        >
+                        <a href="" class="contact__item-blu">089.887.5522</a>
+                        <span class="contact__item-span">(9:30 - 22:00)</span>
+                      </li>
+                      <li
+                        id="contact__item-cart"
+                        class="contact__item contact__item-flex"
+                      >
+                        <span class="contact__item-span">Giỏ hàng</span>
+                        <i
+                          class="contact__item-icon fa-solid fa-cart-shopping"
+                        ></i>
+                      </li>
+                      <li
+                        id="contact__item-user"
+                        class="contact__item contact__item-flex"
+                      >
+                        <span class="contact__item-span">Đăng nhập</span>
+                        <i class="contact__item-icon fa-regular fa-user"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="col l-8 m-6 c-6">
-              <div class="header-left">
+              <div class="header__left">
                 <a href="#" class="logo">
                   <img src="./assets/images/header/logo.png.webp" alt="" />
                 </a>
@@ -69,66 +171,62 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Air Jordan 1</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Vans</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ultraboost</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >New Balance 550</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Yeezy</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >NDM</a
-                                    >
+                                    <a href="#" class="child__item-link">NDM</a>
                                   </li>
                                 </ul>
                               </div>
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >MLB</a
-                                    >
+                                    <a href="#" class="child__item-link">MLB</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ari Force 1</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Nike Dunk</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Nike Blazer</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Air Max</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Kyrie
                                     </a>
                                   </li>
@@ -144,66 +242,62 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Jordan 1</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Jordan 1 Low</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Jordan 1 Mid</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Jordan 1 High</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Jordan 1 Elevated</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >NDM</a
-                                    >
+                                    <a href="#" class="child__item-link">NDM</a>
                                   </li>
                                 </ul>
                               </div>
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >MLB</a
-                                    >
+                                    <a href="#" class="child__item-link">MLB</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ari Force 1</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Nike Dunk</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Nike Blazer</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Air Max</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Kyrie</a
                                     >
                                   </li>
@@ -219,32 +313,32 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Air force 1</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Nike Dunk</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Nike Blazer</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Air Max</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ari Zoom</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Cortez</a
                                     >
                                   </li>
@@ -253,32 +347,28 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Kyrie</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Lebron</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >React</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >PG</a
-                                    >
+                                    <a href="#" class="child__item-link">PG</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >KG</a
-                                    >
+                                    <a href="#" class="child__item-link">KG</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Zoom Freak</a
                                     >
                                   </li>
@@ -294,32 +384,32 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Yeezy</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ultraboost</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Stan Smith</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Superstar</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Continental</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >X PLR</a
                                     >
                                   </li>
@@ -328,27 +418,23 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >MLB</a
-                                    >
+                                    <a href="#" class="child__item-link">MLB</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Human Race</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Forum</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >ZX</a
-                                    >
+                                    <a href="#" class="child__item-link">ZX</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Falcon</a
                                     >
                                   </li>
@@ -364,22 +450,22 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Mile</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Playball</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Liner</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >chunky</a
                                     >
                                   </li>
@@ -397,32 +483,32 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >NB 327</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >NB 550</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >NB 574</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >NB 57/40</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >NB TWO WXY</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >NB KAWHI</a
                                     >
                                   </li>
@@ -438,22 +524,22 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Puma RS</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Puma Mule</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Puma Suede</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Puma Thunder</a
                                     >
                                   </li>
@@ -469,22 +555,22 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Old Skool</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Slip-on</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Authentic</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Vans Era</a
                                     >
                                   </li>
@@ -493,22 +579,20 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >One star</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Classic</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >SK8</a
-                                    >
+                                    <a href="#" class="child__item-link">SK8</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Style 36</a
                                     >
                                   </li>
@@ -524,32 +608,32 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Chuck 70</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Chuck Taylor</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Run Star Hike</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Pop Art</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Pro Leather</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Jack Purcell</a
                                     >
                                   </li>
@@ -567,32 +651,32 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Reebok</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Fila</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Timberland</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Excelcior</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Anta</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Saint Laurent</a
                                     >
                                   </li>
@@ -601,32 +685,32 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Dior</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Off-While</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Sacai</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Fear Of God</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Travis Scott</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Louis Vuitton</a
                                     >
                                   </li>
@@ -651,22 +735,20 @@
                               <div class="col col-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >MLB</a
-                                    >
+                                    <a href="#" class="child__item-link">MLB</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >ADVL</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Drew House</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Essentials</a
                                     >
                                   </li>
@@ -682,19 +764,15 @@
                               <div class="col col-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Áo</a
-                                    >
+                                    <a href="#" class="child__item-link">Áo</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Quần</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Váy</a
-                                    >
+                                    <a href="#" class="child__item-link">Váy</a>
                                   </li>
                                 </ul>
                               </div>
@@ -708,19 +786,15 @@
                               <div class="col col-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Áo</a
-                                    >
+                                    <a href="#" class="child__item-link">Áo</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Quần</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Váy</a
-                                    >
+                                    <a href="#" class="child__item-link">Váy</a>
                                   </li>
                                 </ul>
                               </div>
@@ -734,9 +808,7 @@
                               <div class="col col-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Áo</a
-                                    >
+                                    <a href="#" class="child__item-link">Áo</a>
                                   </li>
                                 </ul>
                               </div>
@@ -750,22 +822,22 @@
                               <div class="col col-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Áo thun</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Áo ba lỗ</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Áo Sweater</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Áo khoác</a
                                     >
                                   </li>
@@ -774,17 +846,17 @@
                               <div class="col col-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Áo sơ mi</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Áo croptop / Bra</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Áo hoodie</a
                                     >
                                   </li>
@@ -802,13 +874,11 @@
                               <div class="col col-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Áo</a
-                                    >
+                                    <a href="#" class="child__item-link">Áo</a>
                                   </li>
 
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Quần</a
                                     >
                                   </li>
@@ -824,12 +894,10 @@
                               <div class="col col-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Áo</a
-                                    >
+                                    <a href="#" class="child__item-link">Áo</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Quần</a
                                     >
                                   </li>
@@ -845,12 +913,10 @@
                               <div class="col col-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Áo</a
-                                    >
+                                    <a href="#" class="child__item-link">Áo</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Quần</a
                                     >
                                   </li>
@@ -866,12 +932,10 @@
                               <div class="col col-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Áo</a
-                                    >
+                                    <a href="#" class="child__item-link">Áo</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Quần</a
                                     >
                                   </li>
@@ -889,22 +953,22 @@
                               <div class="col col-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Lacoste</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Dickies</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Supreme</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Doncare</a
                                     >
                                   </li>
@@ -927,22 +991,20 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Nike</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >MLB</a
-                                    >
+                                    <a href="#" class="child__item-link">MLB</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Yeezy</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Lacoste</a
                                     >
                                   </li>
@@ -951,17 +1013,17 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Adidas</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Jordan</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Crocs</a
                                     >
                                   </li>
@@ -977,27 +1039,25 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Gucci</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >MCM</a
-                                    >
+                                    <a href="#" class="child__item-link">MCM</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Burberry</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Prada</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Saint Laurent</a
                                     >
                                   </li>
@@ -1015,27 +1075,27 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Túi MLB</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Túi Sprayground</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Túi Gucci</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Túi Louis Vuitton</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ví Playboy</a
                                     >
                                   </li>
@@ -1044,22 +1104,22 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ví Sprayground</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ví MCM</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ví Gucci</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ví Louis Vuitton</a
                                     >
                                   </li>
@@ -1075,7 +1135,7 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Nike</a
                                     >
                                   </li>
@@ -1091,17 +1151,15 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >MLB</a
-                                    >
+                                    <a href="#" class="child__item-link">MLB</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Adidas</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Sneaker Daily</a
                                     >
                                   </li>
@@ -1119,12 +1177,12 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Sprayground</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Herschel</a
                                     >
                                   </li>
@@ -1140,7 +1198,7 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Rolex</a
                                     >
                                   </li>
@@ -1156,17 +1214,17 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Crep Protect</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Bọt Lab</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Dịch vụ vệ sinh</a
                                     >
                                   </li>
@@ -1184,7 +1242,7 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Bearbrick</a
                                     >
                                   </li>
@@ -1212,22 +1270,20 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Nike</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >MLB</a
-                                    >
+                                    <a href="#" class="child__item-link">MLB</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Yeezy</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Lacoste</a
                                     >
                                   </li>
@@ -1236,17 +1292,17 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Adidas</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Jordan</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Crocs</a
                                     >
                                   </li>
@@ -1262,27 +1318,25 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Gucci</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >MCM</a
-                                    >
+                                    <a href="#" class="child__item-link">MCM</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Burberry</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Prada</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Saint Laurent</a
                                     >
                                   </li>
@@ -1300,27 +1354,27 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Túi MLB</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Túi Sprayground</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Túi Gucci</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Túi Louis Vuitton</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ví Playboy</a
                                     >
                                   </li>
@@ -1329,22 +1383,22 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ví Sprayground</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ví MCM</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ví Gucci</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Ví Louis Vuitton</a
                                     >
                                   </li>
@@ -1360,7 +1414,7 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Nike</a
                                     >
                                   </li>
@@ -1376,17 +1430,15 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >MLB</a
-                                    >
+                                    <a href="#" class="child__item-link">MLB</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Adidas</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Sneaker Daily</a
                                     >
                                   </li>
@@ -1404,12 +1456,12 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Sprayground</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Herschel</a
                                     >
                                   </li>
@@ -1425,7 +1477,7 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Rolex</a
                                     >
                                   </li>
@@ -1441,17 +1493,17 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Crep Protect</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Bọt Lab</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Dịch vụ vệ sinh</a
                                     >
                                   </li>
@@ -1469,7 +1521,7 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Bearbrick</a
                                     >
                                   </li>
@@ -1497,22 +1549,18 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Giày</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Tất</a
-                                    >
+                                    <a href="#" class="child__item-link">Tất</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Áo</a
-                                    >
+                                    <a href="#" class="child__item-link">Áo</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Quần</a
                                     >
                                   </li>
@@ -1528,22 +1576,20 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Giày</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Áo</a
-                                    >
+                                    <a href="#" class="child__item-link">Áo</a>
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Quần</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Túi golf</a
                                     >
                                   </li>
@@ -1559,19 +1605,17 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Giày</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Quần</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
-                                      >Áo</a
-                                    >
+                                    <a href="#" class="child__item-link">Áo</a>
                                   </li>
                                 </ul>
                               </div>
@@ -1585,7 +1629,7 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Giày</a
                                     >
                                   </li>
@@ -1601,7 +1645,7 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Giày</a
                                     >
                                   </li>
@@ -1621,12 +1665,12 @@
                               <div class="col l-6">
                                 <ul class="menu-child__list">
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Giày</a
                                     >
                                   </li>
                                   <li class="menu-child__item">
-                                    <a href="#" class="menu-child__item-link"
+                                    <a href="#" class="child__item-link"
                                       >Sport bar</a
                                     >
                                   </li>
@@ -1645,129 +1689,25 @@
               </div>
             </div>
             <div class="col l-4 m-3 c-3">
-              <ul class="header-right">
-                <li class="header-right__item">
-                  <a href="#" class="header-right__item-link">24h Thời Trang</a>
+              <ul class="header__right">
+                <li class="right__item">
+                  <a href="#" class="right__item-link">24h Thời Trang</a>
                 </li>
-                <li class="header-right__item">
-                  <label for="search-input" class="header-right__item-link">
+                <li class="right__item">
+                  <p id="right__item-search" class="right__item-link">
                     <i
-                      class="header-right-icon fa-sharp fa-solid fa-magnifying-glass"
+                      class="right__icon fa-sharp fa-solid fa-magnifying-glass"
                     ></i>
-                  </label>
-                  <input
-                    type="checkbox"
-                    name=""
-                    class="search-input"
-                    id="search-input"
-                    hidden
-                  />
-                  <div class="modal"></div>
-                  <div class="search">
-                    <div class="grid wide">
-                      <div class="header__close auth__close">
-                        <span>Đóng</span>
-                        <label for="search-input" class="close__icon">
-                          <div class="close__icon-up"></div>
-                          <div class="close__icon-down"></div>
-                        </label>
-                      </div>
-                      <div class="search__container">
-                        <div class="container__inner">
-                          <div class="container__input-wrap">
-                            <input
-                              type="text"
-                              class="container__input"
-                              name=""
-                              placeholder="Tìm kiếm sản phẩm, danh mục..."
-                            />
-                          </div>
-                          <button class="container__btn">TÌM KIẾM</button>
-                        </div>
-                        <div class="search__history">
-                          <h3 class="history__heading">
-                            tìm kiếm phổ biến nhất:
-                          </h3>
-                          <ul class="history__list">
-                            <li class="history__item">
-                              <a href="#" class="history__item-link"
-                                >Air Jordan 1</a
-                              >
-                            </li>
-                            <li class="history__item">
-                              <a href="#" class="history__item-link"
-                                >Air Force 1</a
-                              >
-                            </li>
-                            <li class="history__item">
-                              <a href="#" class="history__item-link"
-                                >Nike Dunk</a
-                              >
-                            </li>
-                            <li class="history__item">
-                              <a href="#" class="history__item-link"
-                                >Kính Mắt</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  </p>
                 </li>
-                <li class="header-right__item">
-                  <label for="cart-input" class="header-right__item-link">
-                    <i class="header-right-icon fa-solid fa-cart-shopping"></i>
-                  </label>
-                  <input
-                    type="checkbox"
-                    hidden
-                    name=""
-                    class="cart-input"
-                    id="cart-input"
-                  />
-                  <div class="modal"></div>
-                  <div class="cart">
-                    <div class="header__close">
-                      <span>Đóng Cart</span>
-                      <label for="cart-input" class="close__icon">
-                        <div class="close__icon-up"></div>
-                        <div class="close__icon-down"></div>
-                      </label>
-                    </div>
-                    <div class="cart__container">
-                      <div class="container-no-product">
-                        <div class="no-product__icon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="feather feather-shopping-bag"
-                          >
-                            <path
-                              d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
-                            ></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                          </svg>
-                        </div>
-                        <p class="no-product__desc">
-                          Chưa có sản phẩm trong giỏ hàng.
-                        </p>
-                        <a href="#" class="no-product__btn">Tiếp tục mua sắm</a>
-                      </div>
-                    </div>
-                  </div>
+                <li class="right__item">
+                  <p id="right__item-cart" class="right__item-link">
+                    <i class="right__icon fa-solid fa-cart-shopping"></i>
+                  </p>
                 </li>
-                <li class="header-right__item">
-                  <a href="#" id="user-open" class="header-right__item-link">
-                    <i class="header-right-icon fa-regular fa-user"></i>
+                <li class="right__item">
+                  <a href="#" id="user-open" class="right__item-link">
+                    <i class="right__icon fa-regular fa-user"></i>
                   </a>
                 </li>
               </ul>
@@ -1792,36 +1732,51 @@
           </div>
         </div>
       </header>
+
       <main class="app-content">
         <div class="grid wide">
           <!-- Slide bar -->
           <div class="row no-gutters slide-bar">
             <div class="col l-9 m-12 c-12">
-              <div class="auto-slide">
-                <div class="auto-slide__list">
-                  <div class="auto-slide__item">
+              <div class="auto-slide__list">
+                <div class="auto-slide__item">
+                  <div class="auto-slide__img">
                     <img
                       src="./assets/images/autoslide/autoslide.webp"
                       alt=""
-                      class="auto-slide__img"
                     />
-                    <a href="#" class="auto-slide__link"></a>
                   </div>
-                  <div class="auto-slide__item">
+                </div>
+                <div class="auto-slide__item">
+                  <div class="auto-slide__img">
                     <img
                       src="./assets/images/autoslide/autosile1.webp"
                       alt=""
-                      class="auto-slide__img"
                     />
-                    <a href="#" class="auto-slide__link"></a>
                   </div>
-                  <div class="auto-slide__item">
+                </div>
+                <div class="auto-slide__item">
+                  <div class="auto-slide__img">
                     <img
                       src="./assets/images/autoslide/autoslide2.webp"
                       alt=""
-                      class="auto-slide__img"
                     />
-                    <a href="#" class="auto-slide__link"></a>
+                  </div>
+                </div>
+                <div class="auto-slide__item">
+                  <div class="auto-slide__img">
+                    <img
+                      src="./assets/images/autoslide/autoslide3.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="auto-slide__item">
+                  <div class="auto-slide__img">
+                    <img
+                      src="./assets/images/autoslide/autoslide4.webp"
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
@@ -2100,7 +2055,7 @@
           <!-- SELLERS -->
           <div class="line"></div>
           <h3 class="product__heading">BEST SELLERS</h3>
-          <div class="row product">
+          <div class="row no-gutters product">
             <div class="col l-3 m-4 c-6">
               <div class="product__item">
                 <a href="#" class="product__link">
@@ -2355,7 +2310,7 @@
           <!-- SPRAYGROUND -->
           <div class="line"></div>
           <h3 class="product__heading">BEST SELLERS</h3>
-          <div class="row product">
+          <div class="row no-gutters product">
             <div class="col l-3 m-4 c-6">
               <div class="product__item">
                 <a href="#" class="product__link">
@@ -2589,7 +2544,7 @@
           </div>
           <!-- Quần áo -->
           <h3 class="product__heading">QUẦN ÁO</h3>
-          <div class="row product">
+          <div class="row no-gutters product">
             <div class="col l-3 m-4 c-6">
               <div class="product__item">
                 <a href="#" class="product__link">
@@ -2945,7 +2900,7 @@
       <footer class="footer">
         <div class="grid wide footer__content">
           <div class="row footer__pc">
-            <div class="col l-2-4 m-6 c-0">
+            <div class="col l-2-4 m-0 c-0">
               <h4 class="footer__heading">Danh mục</h4>
               <ul class="footer__list">
                 <li class="footer__item">
@@ -2968,7 +2923,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col l-2-4 m-6 c-0">
+            <div class="col l-2-4 m-0 c-0">
               <h4 class="footer__heading">Hỗ trợ khách hàng</h4>
               <ul class="footer__list">
                 <li class="footer__item">
@@ -3011,7 +2966,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col l-2-4 m-6 c-0">
+            <div class="col l-2-4 m-0 c-0">
               <h4 class="footer__heading">Về SNEAKER DAILY</h4>
               <ul class="footer__list">
                 <li class="footer__item">
@@ -3051,7 +3006,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col l-2-4 m-6 c-0">
+            <div class="col l-2-4 m-0 c-0">
               <h4 class="footer__heading">Hệ thống cửa hàng</h4>
               <ul class="footer__list">
                 <li class="footer__item footer__item-address">
@@ -3076,7 +3031,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col l-2-4 m-6 c-0">
+            <div class="col l-2-4 m-0 c-0">
               <div class="footer__contact">
                 <h3 class="contact__heading">SNEAKER DAILY lắng nghe bạn!</h3>
                 <p class="contact__desc">
@@ -3249,7 +3204,9 @@
               </div>
             </div>
             <div class="col l-0 m-12 c-12 footer__list-inner">
-              <h4 class="footer__heading">Danh mục</h4>
+              <h4 class="footer__heading footer__heading-mobile">
+                <span>Danh mục</span> <i class="fa-solid fa-plus"></i>
+              </h4>
               <ul class="footer__list">
                 <li class="footer__item">
                   <a href="" class="footer__link">Giày</a>
@@ -3272,7 +3229,9 @@
               </ul>
             </div>
             <div class="col l-0 m-12 c-12 footer__list-inner">
-              <h4 class="footer__heading">Hỗ trợ khách hàng</h4>
+              <h4 class="footer__heading footer__heading-mobile">
+                <span>Hỗ trợ khách hàng</span> <i class="fa-solid fa-plus"></i>
+              </h4>
               <ul class="footer__list">
                 <li class="footer__item">
                   <a href="#" class="footer__link">FAQs & Help</a>
@@ -3315,7 +3274,9 @@
               </ul>
             </div>
             <div class="col l-0 m-12 c-12 footer__list-inner">
-              <h4 class="footer__heading">Về SNEAKER DAILY</h4>
+              <h4 class="footer__heading footer__heading-mobile">
+                <span>Về SNEAKER DAILY</span> <i class="fa-solid fa-plus"></i>
+              </h4>
               <ul class="footer__list">
                 <li class="footer__item">
                   <a href="#" class="footer__link">Giới thiệu Sneaker Daily</a>
@@ -3326,7 +3287,10 @@
               </ul>
             </div>
             <div class="col l-0 m-12 c-12 footer__list-inner">
-              <h4 class="footer__heading">Tài liệu - Tuyển dụng</h4>
+              <h4 class="footer__heading footer__heading-mobile">
+                <span>Tài liệu - Tuyển dụng</span>
+                <i class="fa-solid fa-plus"></i>
+              </h4>
               <ul class="footer__list">
                 <li class="footer__item">
                   <a href="#" class="footer__link">Đăng ký bản quyền</a>
@@ -3346,7 +3310,9 @@
               </ul>
             </div>
             <div class="col l-0 m-12 c-12 footer__list-inner">
-              <h4 class="footer__heading">Dịch vụ</h4>
+              <h4 class="footer__heading footer__heading-mobile">
+                <span>Dịch vụ</span> <i class="fa-solid fa-plus"></i>
+              </h4>
               <ul class="footer__list">
                 <li class="footer__item">
                   <a href="#" class="footer__link">Tạp chí</a>
@@ -3461,11 +3427,11 @@
         <polyline points="12 5 19 12 12 19"></polyline>
       </svg>
     </div>
-    <div id="modal" class="modal">
+    <div id="modal-auth" class="modal">
       <div class="modal__container">
         <div id="form-login" class="auth">
           <div class="header__close">
-            <div class="close__icon auth__close">
+            <div class="close__icon close__icon-modal">
               <div class="close__icon-up"></div>
               <div class="close__icon-down"></div>
             </div>
@@ -3521,7 +3487,7 @@
         </div>
         <div id="form-register" class="auth">
           <div class="header__close">
-            <div class="close__icon auth__close">
+            <div class="close__icon close__icon-modal">
               <div class="close__icon-up"></div>
               <div class="close__icon-down"></div>
             </div>
@@ -3559,6 +3525,303 @@
         </div>
       </div>
     </div>
+    <div id="modal-cart" class="modal">
+      <div class="cart">
+        <div class="header__close">
+          <span>Đóng Cart</span>
+          <div id="close__icon-cart" class="close__icon close__icon-modal">
+            <div class="close__icon-up"></div>
+            <div class="close__icon-down"></div>
+          </div>
+        </div>
+        <div class="cart__container">
+          <div class="container-no-product">
+            <div class="no-product__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-shopping-bag"
+              >
+                <path
+                  d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                ></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </div>
+            <p class="no-product__desc">Chưa có sản phẩm trong giỏ hàng.</p>
+            <a href="#" class="no-product__btn">Tiếp tục mua sắm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-search" class="modal">
+      <div class="search">
+        <div class="grid wide">
+          <div class="header__close">
+            <span>Đóng</span>
+            <div id="close__icon-search" class="close__icon close__icon-modal">
+              <div class="close__icon-up"></div>
+              <div class="close__icon-down"></div>
+            </div>
+          </div>
+          <div class="search__container">
+            <div class="container__inner">
+              <div class="container__input-wrap">
+                <input
+                  type="text"
+                  class="container__input"
+                  name=""
+                  placeholder="Tìm kiếm sản phẩm, danh mục..."
+                />
+              </div>
+              <button class="container__btn">TÌM KIẾM</button>
+            </div>
+            <div class="search__history">
+              <h3 class="history__heading">tìm kiếm phổ biến nhất:</h3>
+              <ul class="history__list">
+                <li class="history__item">
+                  <a href="#" class="history__item-link">Air Jordan 1</a>
+                </li>
+                <li class="history__item">
+                  <a href="#" class="history__item-link">Air Force 1</a>
+                </li>
+                <li class="history__item">
+                  <a href="#" class="history__item-link">Nike Dunk</a>
+                </li>
+                <li class="history__item">
+                  <a href="#" class="history__item-link">Kính Mắt</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-footer">
+      <div class="grid">
+        <div class="row">
+          <div class="col l-0 m-2-4 c-2-4 menu-footer__item">
+            <a href="#" class="menu-footer__link">
+              <div class="menu-footer__img">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 17.71 17.72"
+                >
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: none;
+                        stroke: #231f20;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 1.07px;
+                      }
+                    </style>
+                  </defs>
+
+                  <g id="Layer_1-2" data-name="Layer 1">
+                    <path
+                      class="cls-1"
+                      d="M.54,9.09V8.63a2.26,2.26,0,0,1,.75-1.16Q4.38,4.39,7.46,1.3A2.35,2.35,0,0,1,8.63.54h.46a2.28,2.28,0,0,1,1.17.76l6.35,6.35.2.21a1.54,1.54,0,0,1-.88,2.5,4.56,4.56,0,0,1-.54,0v4.91a1.79,1.79,0,0,1-1.86,1.87H11.05c-.41,0-.59-.19-.59-.6,0-1.25,0-2.49,0-3.74A.82.82,0,0,0,9.56,12c-.46,0-.92,0-1.38,0a.86.86,0,0,0-.93.92c0,1.24,0,2.48,0,3.72a.52.52,0,0,1-.59.59H4.22a1.8,1.8,0,0,1-1.9-1.9V10.41l0,0H2A1.49,1.49,0,0,1,.71,9.55,2.54,2.54,0,0,1,.54,9.09Z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <span>Trang Chủ</span>
+            </a>
+          </div>
+          <div class="col l-0 m-2-4 c-2-4 menu-footer__item">
+            <a href="#" class="menu-footer__link">
+              <div class="menu-footer__img">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-phone-call"
+                >
+                  <path
+                    d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+              </div>
+              <span>Hotline</span>
+            </a>
+          </div>
+          <div class="col l-0 m-2-4 c-2-4 menu-footer__item">
+            <a href="#" class="menu-footer__link">
+              <div class="menu-footer__img">
+                <svg
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 460.1 436.6"
+                  width="20"
+                  height="20"
+                >
+                  <style>
+                    .st0 {
+                      fill: #fdfefe;
+                    }
+                    .st1 {
+                      fill: #0180c7;
+                    }
+                    .st2 {
+                      fill: #0172b1;
+                    }
+                    .st3 {
+                      fill: none;
+                      stroke: #0180c7;
+                      stroke-width: 2;
+                      stroke-miterlimit: 10;
+                    }
+                  </style>
+                  <title>logo-zalo-vector</title>
+
+                  <path
+                    class="st1"
+                    d="M139.5 436.2c-27.3 0-54.7.9-82-.1-32.3-1.3-57-28.4-57-60.7 0-104.3.2-208.6 0-313C.5 26.7 28.4 1.8 60.5.9c33.6-.9 67.3-.2 101-.2.6 0 1.4-.3 1.7.7-.2 1.8-2 2-3.1 2.7-19.8 11.6-37.9 25.5-53.1 42.7-25.1 28.4-42.5 61-48.4 98.9-10.4 66.9 10.5 123.7 57.8 171.1 8.4 8.5 9.5 15.1 2.8 26.5-8.1 13.7-20.4 23-33.5 31.5-1.4.8-2.8 1.8-4.2 2.7-2.1 1.8-.8 2.7 1 3.5.4.9.9 1.7 1.5 2.5 11.5 10.2 22.4 21.1 33.7 31.5 5.3 4.9 10.6 10 15.7 15.1 2.1 1.9 5.6 2.5 6.1 6.1z"
+                  ></path>
+                  <path
+                    class="st2"
+                    d="M139.5 436.2c-.5-3.5-4-4.1-6.1-6.2-5.1-5.2-10.4-10.2-15.7-15.1-11.3-10.4-22.2-21.3-33.7-31.5-.6-.8-1.1-1.6-1.5-2.5 25.5 5 50.4 1.6 74.9-5.9 8.3-2.5 16.6-5 25-7.1 5.7-1.5 11.7-1.2 17.2.8 63.4 21.8 126 19.8 187.6-7.2 25.1-11.1 48-26.7 67.4-46.2 1-1 1.7-2.5 3.5-2.6.9 1.4.4 2.9.4 4.4v58.5c.2 33.4-26.6 60.6-60 60.9h-.5c-36 .2-72 0-108 0H145.5c-2-.2-4-.3-6-.3z"
+                  ></path>
+                  <path
+                    class="st1"
+                    d="M155.1 212.4c15.1 0 29.3-.1 43.4 0 7.9.1 12.2 3.4 13 9.7.9 7.9-3.7 13.2-12.3 13.3-16.2.2-32.3.1-48.5.1-4.7 0-9.3.2-14-.1-5.8-.3-11.5-1.5-14.3-7.5s-.8-11.4 3-16.3c15.4-19.6 30.9-39.3 46.4-58.9.9-1.2 1.8-2.4 2.7-3.5-1-1.7-2.4-.9-3.6-1-10.8-.1-21.7 0-32.5-.1-2.5 0-5-.3-7.4-.8-5.7-1.3-9.2-7-7.9-12.6.9-3.8 3.9-6.9 7.7-7.8 2.4-.6 4.9-.9 7.4-.9 17.8-.1 35.7-.1 53.5 0 3.2-.1 6.3.3 9.4 1.1 6.8 2.3 9.7 8.6 7 15.2-2.4 5.7-6.2 10.6-10 15.5-13.1 16.7-26.2 33.3-39.3 49.8-1.1 1.3-2.1 2.6-3.7 4.8z"
+                  ></path>
+                  <path
+                    class="st1"
+                    d="M271.1 159.8c2.4-3.1 4.9-6 9-6.8 7.9-1.6 15.3 3.5 15.4 11.5.3 20 .2 40 0 60 0 5.2-3.4 9.8-8.3 11.3-5 1.9-10.7.4-14-3.9-1.7-2.1-2.4-2.5-4.8-.6-9.1 7.4-19.4 8.7-30.5 5.1-17.8-5.8-25.1-19.7-27.1-36.6-2.1-18.3 4-33.9 20.4-43.5 13.6-8.1 27.4-7.4 39.9 3.5zm-35.4 36.5c.2 4.4 1.6 8.6 4.2 12.1 5.4 7.2 15.7 8.7 23 3.3 1.2-.9 2.3-2 3.3-3.3 5.6-7.6 5.6-20.1 0-27.7-2.8-3.9-7.2-6.2-11.9-6.3-11-.7-18.7 7.8-18.6 21.9zM340.4 196.9c-.8-25.7 16.1-44.9 40.1-45.6 25.5-.8 44.1 16.3 44.9 41.3.8 25.3-14.7 43.2-38.6 45.6-26.1 2.6-46.8-16.3-46.4-41.3zm25.1-2.4c-.2 5 1.3 9.9 4.3 14 5.5 7.2 15.8 8.6 23 3 1.1-.8 2-1.8 2.9-2.8 5.8-7.6 5.8-20.4.1-28-2.8-3.8-7.2-6.2-11.9-6.3-10.8-.6-18.4 7.6-18.4 20.1zM331.6 177c0 15.5.1 31 0 46.5.1 7.1-5.5 13-12.6 13.2-1.2 0-2.5-.1-3.7-.4-5-1.3-8.8-6.6-8.8-12.9v-79.5c0-4.7-.1-9.3 0-14 .1-7.7 5-12.7 12.4-12.7 7.6-.1 12.7 4.9 12.7 12.9.1 15.6 0 31.3 0 46.9z"
+                  ></path>
+                  <path
+                    class="st0"
+                    d="M235.7 196.3c-.1-14.1 7.6-22.6 18.5-22 4.7.2 9.1 2.5 11.9 6.4 5.6 7.5 5.6 20.1 0 27.7-5.4 7.2-15.7 8.7-23 3.3-1.2-.9-2.3-2-3.3-3.3-2.5-3.5-3.9-7.7-4.1-12.1zM365.5 194.5c0-12.4 7.6-20.7 18.4-20.1 4.7.1 9.1 2.5 11.9 6.3 5.7 7.6 5.7 20.5-.1 28-5.6 7.1-16 8.3-23.1 2.7-1.1-.8-2-1.8-2.8-2.9-3-4.1-4.4-9-4.3-14z"
+                  ></path>
+                  <path
+                    class="st3"
+                    d="M66 1h328.1c35.9 0 65 29.1 65 65v303c0 35.9-29.1 65-65 65H66c-35.9 0-65-29.1-65-65V66C1 30.1 30.1 1 66 1z"
+                  ></path>
+                </svg>
+              </div>
+              <span>Zalo</span>
+            </a>
+          </div>
+          <div class="col l-0 m-2-4 c-2-4 menu-footer__item">
+            <a href="#" class="menu-footer__link">
+              <div class="menu-footer__img">
+                <svg width="20" height="20" viewBox="0 0 36 36">
+                  <path
+                    fill="#0A7CFF"
+                    d="M1 17.99C1 8.51488 8.42339 1.5 18 1.5C27.5766 1.5 35 8.51488 35 17.99C35 27.4651 27.5766 34.48 18 34.48C16.2799 34.48 14.6296 34.2528 13.079 33.8264C12.7776 33.7435 12.4571 33.767 12.171 33.8933L8.79679 35.3828C7.91415 35.7724 6.91779 35.1446 6.88821 34.1803L6.79564 31.156C6.78425 30.7836 6.61663 30.4352 6.33893 30.1868C3.03116 27.2287 1 22.9461 1 17.99ZM12.7854 14.8897L7.79161 22.8124C7.31238 23.5727 8.24695 24.4295 8.96291 23.8862L14.327 19.8152C14.6899 19.5398 15.1913 19.5384 15.5557 19.8116L19.5276 22.7905C20.7193 23.6845 22.4204 23.3706 23.2148 22.1103L28.2085 14.1875C28.6877 13.4272 27.7531 12.5704 27.0371 13.1137L21.673 17.1847C21.3102 17.4601 20.8088 17.4616 20.4444 17.1882L16.4726 14.2094C15.2807 13.3155 13.5797 13.6293 12.7854 14.8897Z"
+                  ></path>
+                </svg>
+              </div>
+              <span>message</span>
+            </a>
+          </div>
+          <div class="col l-0 m-2-4 c-2-4 menu-footer__item">
+            <a href="#" class="menu-footer__link sale">
+              <div class="menu-footer__img">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 17.71 17.72"
+                >
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: none;
+                        stroke: #231f20;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 1.07px;
+                      }
+                      .cls-2 {
+                        fill: #e0052b;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <path
+                        class="cls-1"
+                        d="M4.22,17.18a1.8,1.8,0,0,1-1.9-1.9V10.41l0,0H2A1.49,1.49,0,0,1,.71,9.55a2.54,2.54,0,0,1-.17-.46V8.63a2.26,2.26,0,0,1,.75-1.16Q4.38,4.39,7.46,1.3A2.35,2.35,0,0,1,8.63.54h.46a2.28,2.28,0,0,1,1.17.76l6.35,6.35.2.21a1.54,1.54,0,0,1-.88,2.5,4.56,4.56,0,0,1-.54,0v4.91a1.79,1.79,0,0,1-1.86,1.87Z"
+                      ></path>
+                      <polygon
+                        class="cls-2"
+                        points="6.11 7.04 11.61 7.04 11.61 8.97 10.94 8.15 7.21 8.15 7.21 8.88 8.87 10.68 6.11 9.53 6.11 7.04"
+                      ></polygon>
+                      <polygon
+                        class="cls-2"
+                        points="6.11 12.24 6.11 14.26 11.61 14.26 11.61 11.36 8.89 10.08 10.5 11.92 10.5 13.15 6.86 13.15 6.11 12.24"
+                      ></polygon>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <span>Ưu đãi</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- js slideshow -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="./assets/js/app.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".auto-slide__list").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false,
+          draggable: true,
+          // prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
+          // nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
+          // dots: true,
+          // responsive: [
+          //   {
+          //     breakpoint: 1025,
+          //     settings: {
+          //       slidesToShow: 3,
+          //     },
+          //   },
+          //   {
+          //     breakpoint: 480,
+          //     settings: {
+          //       slidesToShow: 1,
+          //       arrows: false,
+          //       infinite: false,
+          //     },
+          //   },
+          // ],
+          autoplay: true,
+          autoplaySpeed: 3000,
+        });
+      });
+    </script>
   </body>
-</html>
+</html> 

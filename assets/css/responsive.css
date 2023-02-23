@@ -13,20 +13,20 @@
     top: 0 !important;
     height: 9.5rem;
   }
-  .menu__list {
-    display: none;
-  }
   .header-inner {
     flex-direction: row-reverse;
   }
-  .header-right {
+  .header__right {
     justify-content: flex-start;
   }
-  .header-left {
+  .header__left {
     justify-content: center;
   }
-  .header-right__item:not(:nth-child(3)) {
+  .right__item:not(:nth-child(3)) {
     display: none;
+  }
+  .menu__list {
+    display: none !important;
   }
   .search-mobile {
     display: flex;
@@ -35,6 +35,7 @@
     margin: 0;
     width: 100%;
   }
+
   /* app-content */
   .app-content {
     margin-top: 10rem;
@@ -48,8 +49,15 @@
     width: 100% !important;
   }
   /* footer */
+  .footer {
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+  }
   .footer__content {
     padding: 0 8px;
+  }
+  .footer__contact {
+    margin-bottom: 20px;
   }
   .contact__list {
     display: flex;
@@ -64,15 +72,33 @@
   .footer__list.footer__list-block {
     display: block;
   }
-  .footer__list-inner:hover .footer__list {
+  .footer__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer__heading-mobile.open + .footer__list {
+    animation: TransformFooterList 0.2s linear;
     display: block;
   }
   .footer__list {
     display: none;
   }
+  .footer__item {
+    padding-left: 5px;
+  }
+  .copyright__item:last-child {
+    padding-top: 5px;
+  }
+  .link__img-height {
+    height: 60px;
+  }
   .message,
   .scroll-top {
     display: none;
+  }
+  .menu-footer {
+    display: block;
   }
 }
 
@@ -97,9 +123,6 @@
   .channel__video-src {
     height: 130px;
   }
-  .link__img-height {
-    height: 60px;
-  }
 }
 
 /* Mobile  */
@@ -108,6 +131,13 @@
   /* header */
   .header {
     padding: 0 5px;
+  }
+  .cart {
+    width: 100%;
+  }
+  .menu-mobile__container {
+    width: 100%;
+    padding: 0 35px;
   }
   /* app-content */
   .app-content {
@@ -119,10 +149,18 @@
   .product {
     margin-bottom: 10px;
   }
+  .product__link-amortization {
+    top: -8px;
+  }
   .sale__img {
     height: 150px;
   }
   .newspaper__img {
     width: 69px;
+  }
+  .modal__container {
+    width: 100%;
+    padding: 0 5px;
+    margin: auto 5px;
   }
 }

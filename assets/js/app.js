@@ -84,4 +84,34 @@ const cartMobileBtn = One("#contact__item-cart");
 cartMobileBtn.onclick = function () {
   modalCart.classList.add("open");
 };
-
+// Slideshow
+$(document).ready(function () {
+  $(".auto-slide__list").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    draggable: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    // prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
+    // nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
+    // dots: true,
+    // responsive: [
+    //   {
+    //     breakpoint: 1025,
+    //     settings: {
+    //       slidesToShow: 3,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 480,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       arrows: false,
+    //       infinite: false,
+    //     },
+    //   },
+    // ],
+  });
+});
